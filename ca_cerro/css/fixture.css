@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    height: 80px;
+    width: 100%;
+    background-color: #acd0d3;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 50px; 
+    position: fixed;
+    top: 0; 
+    z-index: 1000; 
+}
+
+nav .logo {
+    margin-right: auto;
+    width: 70px;
+    transition: all 0.5s ease ;
+}
+
+nav .logo:hover{
+    transform: scale(1.1);
+    color: white;
+}
+
+nav a {
+    display: flex;
+    color: #000;
+    position: relative;
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: 10px;
+    text-transform: uppercase;
+    justify-content: flex-end;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+section {
+    margin-top: 80px;
+
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.fixture-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    width: 80%;
+    max-width: 1200px; /* Opcional: para limitar el ancho máximo si lo deseas */
+    margin: 0 auto; /* Centra el contenedor en el eje horizontal */
+    gap: 135px;
+    padding: 10px;
+    justify-items: center;  
+    align-items: center;    /* Centra los elementos verticalmente dentro de las celdas */
+
+}
+
+.fixture-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.fixture-card h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #00b7ff;
+}
+
+.fixture-card p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.fixture-card span {
+    font-weight: bold;
+    color: #333;
+}
+
+.no-data {
+    text-align: center;
+    font-style: italic;
+    color: #777;
+    grid-column: span 3;
+}
+
+.partido-card {
+    position: relative;
+    width: 250px;
+    padding: 10px;
+    border-radius: 8px;
+    background: #f5f5f5;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.partido-card:hover {
+    transform: scale(1.05);
+    z-index: 10;
+}
+
+.partido-resumen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.escudo {
+    width: 60px;
+    height: 60px;
+}
+
+.vs {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.partido-detalle {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 260px;
+    padding: 10px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10; /* Asegura que aparezca encima de otros partidos */
+}
+
+/* Evita la superposición de los partidos al hacer hover */
+.partido-card:hover .partido-detalle {
+    display: block;
+}
+
+
+
+.escudo-gris {
+    filter: grayscale(20%) sepia(100%) hue-rotate(180deg)  brightness(100%);
+}
