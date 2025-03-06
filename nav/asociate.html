@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asociate | Club Atletico Cerro</title>
+    <link rel="icon" href="../recursos/CACerro_logo.png" type="image/png">
+
+    <link rel="stylesheet" href="../css/asociate.css">
+
+    <!-- FUENTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Sixtyfour&display=swap"
+        rel="stylesheet">
+
+    <!-- ICONOS -->
+
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+
+
+
+    <div id="asociate-form">
+
+        <form id="formulario">
+            <h2>Formulario de Socio</h2>
+
+            <label for="name">Nombres:</label>
+            <input type="text" name="name" id="name" autocomplete="off">
+            <div class="error" id="errorName"></div>
+            <br>
+            <label for="lastname">Apellidos:</label>
+            <input type="text" name="lastname" id="lastname" autocomplete="off">
+            <div class="error" id="errorLastname"></div>
+            <br>
+            <label for="document">Documento:</label>
+            <input type="number" name="document" id="document" autocomplete="off" placeholder="Sin puntos ni guiones">
+            <div class="error" id="errorDocument"></div>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" autocomplete="off">
+            <div class="error" id="errorEmail"></div>
+            <br>
+            <label for="birth">Fecha de nacimiento:</label>
+            <input type="date" name="birth" id="birth">
+            <div class="error" id="errorBirth"></div>
+            <br>
+            <label for="phone">Telefono:</label>
+            <input type="number" name="phone" id="phone" autocomplete="off">
+            <div class="error" id="errorPhone"></div>
+            <br>
+            <label for="gender">Genero:</label>
+            <select name="gender" id="gender">
+                <option value=''>Seleccione</option>
+                <option value="male">Masculino</option>
+                <option value="female">Femenino</option>
+            </select>
+            <div class="error" id="errorGender"></div>
+            <br>
+            <label for="address">Dirección</label>
+            <input type="text" name="address" id="address" autocomplete="off">
+            <div class="error" id="errorAddress"></div>
+            <br>
+
+            <label>
+                <input type="checkbox" name="acceptTerms" id="acceptTerms">
+                Acepto terminos y condiciones
+            </label>
+            <div class="error" id="errorTerms"></div>
+            <br>
+            <input type="submit" value="Enviar" id="send">
+
+
+        </form>
+
+    </div>
+
+    <script src="../javascript/validacion.js"></script>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    height: 80px;
+    width: 100%;
+    background-color: #acd0d3;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 50px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .logo {
+    margin-right: auto;
+    width: 70px;
+    transition: all 0.5s ease;
+}
+
+nav .logo:hover {
+    transform: scale(1.1);
+    color: white;
+}
+
+nav a {
+    display: flex;
+    color: #000;
+    position: relative;
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: 10px;
+    text-transform: uppercase;
+    justify-content: flex-end;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+/* HERO & SECTION */
+h1 {
+    font-family: "Roboto Slab", serif;
+    font-weight: 300;
+    font-size: 80px;
+    text-transform: uppercase;
+    margin-top: 25pxx;
+}
+
+h2 {
+    font-family: "Roboto Slab", serif;
+    font-weight: 300;
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-top: 25pxx;
+}
+
+.hero {
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    margin-top: 120px;
+    align-items: center;
+    position: relative;
+}
+
+
+.fixture-container {
+    position: relative;
+    margin-top: 20px;
+
+}
+
+/* SECCION CON NOVEDADES */
+
+.posts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 10px;
+}
+
+.post-card {
+    background-color: aliceblue;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgb(0, 0, 0, 0.1);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.post-card img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.post-card h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.post-card p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+}
+
+.post-date {
+    font-size: 12px;
+    color: #888;
+    margin-top: 10px;
+}
+
+.no-data {
+    text-aling: center;
+    font-style: italic;
+    color: #777;
+    grid-column: span 3;
+}
+
+
+/* PROXIMO PARTIDOS */
+
+.proximo-container {
+    text-align: ce;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.proximo-partido {
+    background: #f5f5f5;
+    margin-left: auto;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.proximo-partido h2 {
+    color: #00b7ff;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.proximo-partido .partido-resumen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.proximo-partido .escudo {
+    width: 60px;
+    height: 60px;
+}
+
+.proximo-partido .vs {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.proximo-partido .partido-detalle {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #555;
+}
+
+.proximo-partido .partido-detalle span {
+    font-weight: bold;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #acd0d3;
+    color: #000000;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ffffff;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.sponsors {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.sponsors img {
+    width: 100px;
+    height: auto;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.sponsors img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: #000000;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.social-icons a:hover {
+    color: #f7f7f7;
+    transform: scale(1.2);
+}
+
+.footer-copy {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #000000;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sponsors img {
+        width: 80px;
+    }
+}
